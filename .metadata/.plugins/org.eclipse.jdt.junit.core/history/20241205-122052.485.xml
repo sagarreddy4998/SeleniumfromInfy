@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Windows" project="mavenTest" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="selenium.mavenTest.Windows" time="0.001" displayname="Windows" uniqueid="[engine:junit-jupiter]/[class:selenium.mavenTest.Windows]">
+    <testcase name="test" classname="selenium.mavenTest.Windows" time="0.001" displayname="test()" uniqueid="[engine:junit-jupiter]/[class:selenium.mavenTest.Windows]/[method:test()]">
+      <error>java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null&#13;
+	at selenium.mavenTest.Windows.test(Windows.java:25)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

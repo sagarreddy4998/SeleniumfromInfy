@@ -1,0 +1,61 @@
+package selenium.mavenTest;
+
+
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+//waits learn
+//Window Handles Practice - H Y R Tutorials
+//XPath Practice - H Y R Tutorials
+//Basic Controls - H Y R Tutorials
+
+class Windows {
+	WebDriver  driver;
+	String url="https://www.hyrtutorials.com/p/window-handles-practice.html";			
+	@Test
+	public void test() throws InterruptedException {
+		driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver.get(url);
+		//driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		
+		driver.findElement(By.id("name")).sendKeys("Test1");
+		Thread.sleep(6000);
+		//click on button to get multiple windows
+		driver.findElement(By.xpath("//button[contains(text(),'Open Multiple Windows')]")).click();
+		Thread.sleep(6000);
+		Set <String> windowhandles= driver.getWindowHandles();
+		for (String handles : windowhandles) {
+			driver.switchTo().window(handles);
+			String title=driver.getTitle();
+			if (title.equals("XPath Practice - H Y R Tutorials")) {
+				System.out.println(driver.getTitle());
+				driver.findElement(By.xpath("//form//div//input[@name='name']")).sendKeys("Test2");
+				Thread.sleep(3000);
+				System.out.println("ented name in xpath page");
+				}
+			else if (title.equals("Basic Controls - H Y R Tutorials")) {
+				//driver.manage().window().maximize();
+				System.out.println("found second window");
+				driver.findElement(By.id("lastName")).sendKeys("Test3");
+				Thread.sleep(3000);
+
+			}
+			else {
+				Thread.sleep(3000);
+				driver.findElement(By.id("name")).clear();
+				Thread.sleep(3000);
+				}
+			System.out.println(handles  +"-"+ driver.getTitle());
+		}
+		driver.quit();
+		}}
+
+	
+
+

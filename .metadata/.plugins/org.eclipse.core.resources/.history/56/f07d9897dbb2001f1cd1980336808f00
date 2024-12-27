@@ -1,0 +1,38 @@
+package selenium.mavenTest;
+
+
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+//waits learn
+class Windows {
+	WebDriver  driver;
+	String url="https://www.hyrtutorials.com/p/window-handles-practice.html";			
+	@Test
+	void test() throws InterruptedException {
+		driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver.get(url);
+		//driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		Thread.sleep(2000);
+		driver.findElement(By.id("name")).sendKeys("Test1");
+		//click on button to get multiple windows
+		driver.findElement(By.xpath("//button[contains(text(),'Open Multiple Windows')]")).click();
+		Thread.sleep(2000);
+		Set <String> windowhandles= driver.getWindowHandles();
+		for (String handles : windowhandles) {
+			//driver.switchTo().window(handles);
+		System.out.println(handles  +"-"+ driver.getTitle());
+		
+			}
+		driver.quit();
+		}}
+
+	
+
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Frames (1)" project="mavenTest" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="selenium.mavenTest.Frames" time="27.956" displayname="Frames" uniqueid="[engine:junit-jupiter]/[class:selenium.mavenTest.Frames]">
+    <testcase name="test" classname="selenium.mavenTest.Frames" time="27.956" displayname="test()" uniqueid="[engine:junit-jupiter]/[class:selenium.mavenTest.Frames]/[method:test()]">
+      <error>org.openqa.selenium.NoSuchFrameException: No frame element found by name or id frm2
+Build info: version: '4.26.0', revision: '8ccf0219d7'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: driver.version: unknown&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:1124)&#13;
+	at selenium.mavenTest.Frames.test(Frames.java:28)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

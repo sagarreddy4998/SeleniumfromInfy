@@ -1,0 +1,33 @@
+package selenium.mavenTest;
+
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+class Naviations {
+
+	@Test
+	void test() throws InterruptedException {
+		WebDriver driver=new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver.get("https://www.google.com/");
+		driver.findElement(By.xpath("//textarea[@name='q']")).sendKeys("Test");
+		Thread.sleep(3000);
+		driver.navigate().refresh();
+		driver.findElement(By.xpath("//textarea[@name='q']")).sendKeys("Test");
+		Thread.sleep(3000);
+		driver.navigate().to("https://www.hyrtutorials.com/p/frames-practice.html");
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//input[@class='frmTextBox']")).sendKeys("Test1");
+		Thread.sleep(3000);
+		driver.navigate().back();
+		Thread.sleep(3000);
+		driver.quit();
+		
+	}
+
+}

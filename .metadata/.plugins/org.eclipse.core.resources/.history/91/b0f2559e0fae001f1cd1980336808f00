@@ -1,0 +1,15 @@
+package selenium.mavenTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class Frames {
+@BeforeMethod
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

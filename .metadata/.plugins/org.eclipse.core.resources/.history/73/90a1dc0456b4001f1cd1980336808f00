@@ -1,0 +1,26 @@
+package selenium.mavenTest;
+
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+class Alerts {
+
+	@Test
+	void test() throws InterruptedException {
+		WebDriver driver=new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver.get("https://netbanking.hdfcbank.com/netbanking/");
+		System.out.println("NA");
+		driver.findElement(By.className("form-control text-muted")).sendKeys("hi");
+//		driver.switchTo().alert().getText();
+//		Thread.sleep(3000);
+//		driver.switchTo().alert().accept();
+//		
+	}
+
+}

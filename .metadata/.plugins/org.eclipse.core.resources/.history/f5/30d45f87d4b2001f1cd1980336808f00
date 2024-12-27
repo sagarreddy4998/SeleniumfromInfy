@@ -1,0 +1,18 @@
+package selenium.mavenTest;
+
+
+import org.junit.jupiter.api.Test;
+import org.testng.annotations.BeforeMethod;
+
+class Windows {
+	@BeforeMethod
+	public void setup() {
+		
+	}
+
+	@Test
+	void test() {
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package selenium.mavenTest;
+
+import java.io.File;
+
+public class Excellfile {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+ File excell = new File("\"C:\\Users\\katkuri.vidyaysagar\\Downloads\\IVSIS_Cred_26May17_1802.xlsx\"");
+ System.out.println(excell.exists());
+	}
+
+}

@@ -1,0 +1,67 @@
+package selenium.mavenTest;
+
+import java.util.Set;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+class Frames {
+	WebDriver driver;
+	String url="https://www.hyrtutorials.com/p/window-handles-practice.html";
+
+	@BeforeMethod
+	public void setup() {
+		}
+
+	@Test
+	public void test() throws InterruptedException {
+		driver= new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver.get(url);
+		driver.manage().window().maximize();
+		String parenthandl=driver.getWindowHandle();
+		System.out.println(parenthandl +" " + driver.getTitle());
+		 driver.findElement(By.xpath("//button[@id='newWindowBtn']")).click();
+		 Thread.sleep(3000);
+		 Set <String> allhandles =driver.getWindowHandles();
+		 for (String child1 : allhandles) {
+			 if (!parenthandl.equals(child1)) {
+				 driver.switchTo().window(child1);
+				 driver.manage().window().maximize();
+				 driver.findElement(By.xpath("//input[@id='firstName']")).sendKeys("Test");
+				 Thread.sleep(3000);
+				
+		}
+		System.out.println(child1+" " +driver.getTitle());
+		}
+		 driver.close();
+		 driver.switchTo().window(parenthandl);
+		 driver.findElement(By.id("name")).sendKeys("Test2");
+		 Thread.sleep(3000);
+		 //Tab
+		 driver.findElement(By.id("name")).clear();
+		driver.findElement(By.xpath("//button[@id=\"newTabBtn\"]")).click();
+		Set <String> tabb=driver.getWindowHandles();
+		for (String Tabs : tabb) {
+			
+		
+		driver.switchTo().window(Tabs);
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//button[text()='Click me']")).click();
+		Thread.sleep(3000);
+		System.out.println("Done");
+		driver.quit();}
+		
+		 
+		 
+}
+	@AfterMethod
+	public void teardown() {
+		
+	}}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Frames" project="Projectt" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="seleniumm.Frames" time="0.048" displayname="Frames" uniqueid="[engine:junit-jupiter]/[class:seleniumm.Frames]">
+    <testcase name="test" classname="seleniumm.Frames" time="0.048" displayname="test()" uniqueid="[engine:junit-jupiter]/[class:seleniumm.Frames]/[method:test()]">
+      <error>java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.switchTo()" because "this.driver" is null&#13;
+	at seleniumm.Frames.test(Frames.java:26)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

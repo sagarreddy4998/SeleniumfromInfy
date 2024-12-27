@@ -1,0 +1,25 @@
+package selenium.mavenTest;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+class MouseActions1 {
+
+	@Test
+	void test() {
+		WebDriver driver=new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
+		Thread.sleep(3000);
+		
+	}
+
+}

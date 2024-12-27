@@ -1,0 +1,26 @@
+package selenium.mavenTest;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+class Alerts {
+
+	@Test
+	void test() {
+		WebDriver driver=new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver.get("https://netbanking.hdfcbank.com/netbanking/");
+		driver.findElement(By.xpath("//a[text()='CONTINUE']")).click();
+		driver.switchTo().alert().getText();
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		
+	}
+
+}

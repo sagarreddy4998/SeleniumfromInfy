@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="DragAndDrop" project="mavenTest" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="selenium.mavenTest.DragAndDrop" time="183.622" displayname="DragAndDrop" uniqueid="[engine:junit-jupiter]/[class:selenium.mavenTest.DragAndDrop]">
+    <testcase name="test" classname="selenium.mavenTest.DragAndDrop" time="183.622" displayname="test()" uniqueid="[engine:junit-jupiter]/[class:selenium.mavenTest.DragAndDrop]/[method:test()]">
+      <error>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.26.0', revision: '8ccf0219d7'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ab4f35993d7cb8b179846990e055d252, get {url=https://dhtmlx.com/docs/products/dhtmlxTree/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.108, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\katkuri.vidyaysaga...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55814}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55814/devtoo..., se:cdpVersion: 131.0.6778.108, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ab4f35993d7cb8b179846990e055d252&#13;
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:422)&#13;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)&#13;
+	at selenium.mavenTest.DragAndDrop.test(DragAndDrop.java:23)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+Caused by: java.util.concurrent.TimeoutException&#13;
+	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2964)&#13;
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)&#13;
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)&#13;
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)&#13;
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)&#13;
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)&#13;
+	at java.base/java.lang.Thread.run(Thread.java:1575)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

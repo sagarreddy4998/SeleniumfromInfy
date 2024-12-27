@@ -1,0 +1,31 @@
+package selenium.mavenTest;
+
+
+import java.time.Duration;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+class Alerts {
+
+	@Test
+	public void test() throws InterruptedException {
+		WebDriver driver=new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver.get("https://netbanking.hdfcbank.com/netbanking/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		//System.out.println("NA");
+		driver.findElement(By.xpath("//a[.='CONTINUE']")).click();
+		//Thread.sleep(3000);
+		System.out.println(driver.switchTo().alert().getText());
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		driver.quit();
+	}
+
+}

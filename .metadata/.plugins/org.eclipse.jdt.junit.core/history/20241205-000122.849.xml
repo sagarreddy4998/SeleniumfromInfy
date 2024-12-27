@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Frames (1)" project="mavenTest" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="selenium.mavenTest.Frames" time="41.831" displayname="Frames" uniqueid="[engine:junit-jupiter]/[class:selenium.mavenTest.Frames]">
+    <testcase name="test" classname="selenium.mavenTest.Frames" time="41.831" displayname="test()" uniqueid="[engine:junit-jupiter]/[class:selenium.mavenTest.Frames]/[method:test()]"/>
+  </testsuite>
+</testrun>

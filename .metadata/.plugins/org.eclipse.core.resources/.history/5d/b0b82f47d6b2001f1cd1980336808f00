@@ -1,0 +1,26 @@
+package selenium.mavenTest;
+
+
+import java.util.Set;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+class Windows {
+	WebDriver  driver;
+	String url="https://www.hyrtutorials.com/p/window-handles-practice.html";			
+	@Test
+	void test() {
+		driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver.get(url);
+		driver.findElement(By.id("name")).sendKeys("Test1");
+		Set <String> windowhandles= driver.getWindowHandles();
+		System.out.println(windowhandles  +"-"+ driver.getTitle());
+		driver.quit();
+	}
+
+}

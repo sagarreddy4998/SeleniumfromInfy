@@ -1,0 +1,32 @@
+package selenium.mavenTest;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.time.Duration;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+class DragAndDrop {
+
+	@Test
+	void test() throws InterruptedException {
+		WebDriver driver=new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.get("https://dhtmlx.com/docs/products/dhtmlxTree/");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin123");
+		driver.findElement(By.xpath("//button[text()=' Login ']")).click();
+		Thread.sleep(3000);
+		driver.quit();
+		
+	}
+
+}

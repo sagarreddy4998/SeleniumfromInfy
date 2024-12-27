@@ -1,0 +1,15 @@
+package seleniumm;
+
+import org.junit.jupiter.api.Test;
+import org.testng.annotations.BeforeMethod;
+
+public class TestClass {
+	@BeforeMethod
+	public void setup() {
+		
+	}
+	@Test
+	public void test() {
+		
+	}
+}

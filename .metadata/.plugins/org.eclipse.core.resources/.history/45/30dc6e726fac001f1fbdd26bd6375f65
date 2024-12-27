@@ -1,0 +1,23 @@
+package seleniumm;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeMethod;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class TestClass {
+	WebDriver driver;
+	String url;
+
+	@BeforeMethod
+	public void setup() {
+		driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver.get(url);
+	}
+	@Test
+	public void test() {
+		
+	}
+}

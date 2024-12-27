@@ -1,0 +1,45 @@
+package selenium.mavenTest;
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+class Frames {
+	WebDriver driver;
+	String url="https://www.hyrtutorials.com/p/window-handles-practice.html";
+
+	@BeforeMethod
+	public void setup() {
+		}
+
+	@Test
+	public void test() throws InterruptedException {
+		driver= new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver.get(url);
+		driver.manage().window().maximize();
+		String parenthandl=driver.getWindowHandle();
+		System.out.println(parenthandl);
+		 driver.findElement(By.xpath("//button[@id='newWindowBtn']")).click();
+		 Thread.sleep(3000);
+		 Set <String> allhandles =driver.getWindowHandles();
+		 for (String handle : allhandles) {
+			 System.out.println(handle);
+			
+		}
+		 
+		 driver.quit();
+}
+	@AfterMethod
+	public void teardown() {
+		
+	}}
